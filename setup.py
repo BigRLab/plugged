@@ -15,11 +15,11 @@ def parse_file(path):
 
 
 setup(
-    name='plug',
+    name='plugged',
     version=VERSION,
     description='A lightweight arbitrary plugin system based off SourceFileLoaderc',
     license='MIT',
-    packages=['plug'],
+    packages=['plugged'],
     zip_safe=True,
     include_package_data=True,
     # install_requires=parse_file(REQUIREMENTS),
