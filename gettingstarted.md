@@ -1,4 +1,4 @@
-# Getting Started
+# Quick Start!
 
 First you gotta install it, `pip3 install plugged --user`.
 
@@ -22,7 +22,7 @@ plugin.function('My', 'params')
 `plugged.im` returns a namespace when loading multiple files, When loading a single file it will return the module reference directly.
 
 
-## plug.load
+## plugged.load
 
 
 The fun method!
