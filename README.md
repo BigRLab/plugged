@@ -1,4 +1,4 @@
-# plug
+# plugged
 
 ![pipeline status](https://gitlab.com/sj1k/plugged/badges/release/pipeline.svg)
 ![coverage](https://gitlab.com/sj1k/plugged/badges/release/coverage.svg)
