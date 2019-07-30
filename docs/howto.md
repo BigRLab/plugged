@@ -1,8 +1,3 @@
-# Quick Start!
-
-First you gotta install it, `pip3 install plugged --user`.
-
-
 ## plugged.im
 
 The quick and easy method!
