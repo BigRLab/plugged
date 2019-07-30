@@ -1,7 +1,7 @@
 '''Plugged provides an extremely lightweight set of utils around
 importlib.machinery.SourceFileLoader for simplistic yet powerful importing.
 
-.. include:: ../gettingstarted.md
+.. include:: ../docs/howto.md
 '''
 
 
@@ -49,4 +49,5 @@ def namespace(plugins: Plugins) -> SimpleNamespace:
 
 def points(glob: str) -> Plugins:
     '''Import files from a glob and returns just the points.'''
-    yield from entry.points(imp.load(glob))
+    for (name, module) in imp.load(glob):
+        yield from entry.points(module)

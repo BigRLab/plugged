@@ -20,10 +20,9 @@ class Point:
         return self.ref(*args, **kwargs)
 
 
-def points(plugins):
-    for (path, module) in plugins:
-        items = ((name, getattr(module, name)) for name in dir(module))
-        yield from ((name, point) for (name, point) in items if isinstance(point, Point))
+def points(module):
+    items = ((name, getattr(module, name)) for name in dir(module))
+    yield from ((name, point) for (name, point) in items if isinstance(point, Point))
 
 
 def point(point):
