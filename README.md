@@ -2,4 +2,11 @@
 
 An extremely simple arbitrary import system built ontop of SourceFileLoader from `importlib`. Supports glob based paths.
 
-Check out the [Quick Start](./gettingstarted.md) on how to use it!
+## Install
+
+```
+pip3 install plugged --user
+```
+
+
+Check out [How to use it!](./docs/howto.md)

@@ -1,0 +1,23 @@
+image: python:3
+
+stages:
+    - test
+    - deploy
+
+test:
+    stage: test
+    script:
+        - pip3 install pytest
+        - pip3 install pytest-cov
+        - python3 -m pytest --cov=plugged --cov-append tests/*.py
+    coverage: '/^TOTAL.*\s+(\d+\%)$/'
+
+
+deploy:
+    stage: deploy
+    only:
+        - release
+    script:
+        - pip3 install twine
+        - python3 setup.py sdist bdist_wheel
+        - twine upload dist/* -u ${PYPI_USER} -p ${PYPI_PASSWORD}
