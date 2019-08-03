@@ -27,6 +27,4 @@ def points(module):
 
 def point(point):
     wrap = wraps(point)
-    def run(*args, **kwargs):
-        return point(*args, **kwargs)
     return wrap(Point(point))
